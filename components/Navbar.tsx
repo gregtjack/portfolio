@@ -1,3 +1,4 @@
+import { SyntheticEvent } from 'react'
 import { useTheme } from 'next-themes'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
@@ -8,10 +9,18 @@ interface NavType {
   to: string
 }
 
-const NavButton = ({text, to}: NavType) => {
+const NavLink = ({text, to}: NavType) => {
+  const router = useRouter()
+  const activeStyle = router.asPath === to ? '' : 'text-gray-400'
+
+  const handleClick = (e: SyntheticEvent) => {
+    e.preventDefault()
+    router.push(to)
+  }
+
   return (
     <Link href={to}>
-      <a className='font-serif underline text-2xl hover:text-teal-300'>
+      <a className={'font-sans text-2xl px-3 hover:text-accent ' + activeStyle} onClick={handleClick}>
         {text}
       </a>
     </Link>
@@ -19,8 +28,7 @@ const NavButton = ({text, to}: NavType) => {
 }
 
 const Navbar = () => {
-  const router = useRouter()
-  console.log(router.asPath)
+  
   const { theme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
 
@@ -30,8 +38,7 @@ const Navbar = () => {
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-10 md:py-20">
-      <div className="flex  items-center justify-between md:flex-row">
-        {/* Logo / Home / Text */}
+      <div className="flex items-center justify-between md:flex-row">
         <Link href="/">
           <a className="hover:opacity-70">
             <img 
@@ -39,7 +46,10 @@ const Navbar = () => {
               src="/images/profile.jpg"/>
           </a>
         </Link>
-        <NavButton text='About' to='/' />
+        <div>
+          <NavLink text='About' to='/' />
+          <NavLink text='Projects' to='/projects' />
+        </div>
         <button
           aria-label="Toggle Dark Mode"
           type="button"
@@ -52,7 +62,7 @@ const Navbar = () => {
               viewBox="0 0 24 24"
               fill="currentColor"
               stroke="currentColor"
-              className="h-4 w-4 text-yellow-500"
+              className="h-4 w-4 dark:text-white text-black"
             >
               {theme === 'dark' ? (
                 <path
@@ -74,7 +84,6 @@ const Navbar = () => {
         </button>
       </div>
     </div>
-    //Rest of the code
   )
 }
 

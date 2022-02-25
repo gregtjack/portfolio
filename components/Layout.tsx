@@ -12,17 +12,17 @@ interface LayoutProps {
 }
 
 const Layout: FunctionComponent<LayoutProps> = ({meta, children}) => {
-    const router = useRouter()
-
     return (
         <div>
             <Head>
                 <title>{meta.title}</title>
                 <meta content={meta.description} name="description" />
             </Head>
-            <main className=" w-full">
+            <main className="w-full">
                 <Navbar />
-                <div>{children}</div>
+                <div className="items-center mx-auto max-w-6xl px-4">
+                    {children}
+                </div>
                 <Footer />
             </main>
         </div>
