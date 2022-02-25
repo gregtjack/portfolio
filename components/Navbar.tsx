@@ -20,7 +20,7 @@ const NavLink = ({text, to}: NavType) => {
 
   return (
     <Link href={to}>
-      <a className={'font-sans text-2xl px-3 hover:text-accent ' + activeStyle} onClick={handleClick}>
+      <a className={"font-bold text-2xl px-3 hover:text-accent transition-all " + activeStyle} onClick={handleClick}>
         {text}
       </a>
     </Link>
@@ -37,12 +37,12 @@ const Navbar = () => {
   }, [])
 
   return (
-    <div className="mx-auto max-w-6xl px-4 py-10 md:py-20">
+    <div className="max-w-6xl px-4 py-10 md:py-20">
       <div className="flex items-center justify-between md:flex-row">
         <Link href="/">
-          <a className="hover:opacity-70">
+          <a>
             <img 
-              className="rounded-full w-24 h-24" 
+              className="outline-gray-400 hover:outline-accent rounded-3xl w-20 h-20 transition-all" 
               src="/images/profile.jpg"/>
           </a>
         </Link>

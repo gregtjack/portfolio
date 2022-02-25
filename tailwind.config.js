@@ -9,8 +9,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'sans': ["'Rubik', regular"],
-        'bold': ["'Rubik', medium"]
+        'sans': ["'DM Sans', regular"],
+        'bold': ["'DM Sans', bold"]
       },
       colors: {
         'accent': '#596aff',

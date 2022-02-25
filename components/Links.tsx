@@ -1,15 +1,23 @@
 import { FunctionComponent } from "react"
 
-interface NiceLinkType {
+interface Link {
   href: string
 }
 
 const Mark: FunctionComponent = ({ children }) => {
-  return <span className="text-accent-dark">{children}</span>
+  return <span className="text-accent">{children}</span>
 }
 
-const NiceLink: FunctionComponent<NiceLinkType> = ({ href, children }) => {
-  return <a href={href} className="underline dark:text-gray-300 text-gray-700">{children}</a>
+const UnderlineLink: FunctionComponent<Link> = ({ href, children }) => {
+  return <a href={href} className="underline hover:text-accent transition-all">{children}</a>
 }
 
-export { Mark, NiceLink }
+const Button: FunctionComponent<Link> = ({href, children}) => {
+  return (
+    <a href={href} className="hover:drop-shadow-lg inline-flex items-center h-10 mr-2 px-3 transition-all text-white text-xl bg-accent rounded-lg">
+      {children}
+    </a>
+  )
+}
+
+export { Mark, UnderlineLink, Button }

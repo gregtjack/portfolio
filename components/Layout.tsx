@@ -18,9 +18,9 @@ const Layout: FunctionComponent<LayoutProps> = ({meta, children}) => {
                 <title>{meta.title}</title>
                 <meta content={meta.description} name="description" />
             </Head>
-            <main className="w-full">
+            <main className="flex flex-col h-screen justify-between mx-auto max-w-4xl">
                 <Navbar />
-                <div className="items-center mx-auto max-w-6xl px-4">
+                <div className="w-full px-4 mb-auto">
                     {children}
                 </div>
                 <Footer />
