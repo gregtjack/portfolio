@@ -9,7 +9,7 @@ const Projects: NextPage = () => {
   }
   return (
     <Layout meta={meta}>
-      Ummmm uhhhh
+      ~~~ WIP ~~~
     </Layout>
   )
 }

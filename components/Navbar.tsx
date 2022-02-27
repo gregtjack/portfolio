@@ -42,10 +42,8 @@ const Navbar = () => {
       <div className="flex items-center justify-between md:flex-row">
         <Link href="/">
           <a>
-            <Image 
-              className="outline-gray-400 hover:outline-accent rounded-full transition-all" 
-              width={100}
-              height={100}
+            <img 
+              className="outline-gray-400 hover:outline-accent rounded-full w-24 h-24" 
               src="/images/profile.jpg"/>
           </a>
         </Link>
