@@ -14,7 +14,7 @@ const UnderlineLink: FunctionComponent<Link> = ({ href, children }) => {
 
 const Button: FunctionComponent<Link> = ({href, children}) => {
   return (
-    <a href={href} className="hover:drop-shadow-lg inline-flex items-center h-10 mr-2 px-3 transition-all text-white text-xl bg-accent rounded-lg">
+    <a href={href} className="hover:drop-shadow-lg inline-flex items-center h-10 mr-2 mb-2 px-3 transition-all text-white text-xl bg-accent rounded-lg">
       {children}
     </a>
   )

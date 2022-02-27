@@ -9,11 +9,12 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'sans': ["'DM Sans', regular"],
-        'bold': ["'DM Sans', bold"]
+        'sans': ["'Inter', regular"],
+        'bold': ["'Inter', bold"],
+        'mono': ["'Roboto Mono'"]
       },
       colors: {
-        'accent': '#596aff',
+        'accent': '#106aff',
         'accent-dark': '#4754c9'
       }
     },

@@ -1,6 +1,7 @@
 import { SyntheticEvent } from 'react'
 import { useTheme } from 'next-themes'
 import Link from 'next/link'
+import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 
@@ -11,7 +12,7 @@ interface NavType {
 
 const NavLink = ({text, to}: NavType) => {
   const router = useRouter()
-  const activeStyle = router.asPath === to ? '' : 'text-gray-400'
+  const activeStyle = router.asPath === to ? 'font-bold' : 'text-gray-400'
 
   const handleClick = (e: SyntheticEvent) => {
     e.preventDefault()
@@ -20,7 +21,7 @@ const NavLink = ({text, to}: NavType) => {
 
   return (
     <Link href={to}>
-      <a className={"font-bold text-2xl px-3 hover:text-accent transition-all " + activeStyle} onClick={handleClick}>
+      <a className={"font-sans text-2xl px-3 hover:text-accent transition-all " + activeStyle} onClick={handleClick}>
         {text}
       </a>
     </Link>
@@ -37,12 +38,14 @@ const Navbar = () => {
   }, [])
 
   return (
-    <div className="max-w-6xl px-4 py-10 md:py-20">
+    <div className="max-w-6xl px-4 py-16 md:py-12">
       <div className="flex items-center justify-between md:flex-row">
         <Link href="/">
           <a>
-            <img 
-              className="outline-gray-400 hover:outline-accent rounded-3xl w-20 h-20 transition-all" 
+            <Image 
+              className="outline-gray-400 hover:outline-accent rounded-full transition-all" 
+              width={100}
+              height={100}
               src="/images/profile.jpg"/>
           </a>
         </Link>
