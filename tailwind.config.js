@@ -14,7 +14,8 @@ module.exports = {
         'mono': ["'Roboto Mono'"]
       },
       colors: {
-        'accent': '#106aff',
+        //'accent': '#106aff',
+        'accent': '#486cfa',
         'accent-dark': '#4754c9'
       }
     },

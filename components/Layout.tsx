@@ -1,7 +1,6 @@
-import React, { FunctionComponent, ReactElement } from "react"
+import React, { FunctionComponent } from "react"
 import { Navbar } from "./Navbar"
 import Head from "next/head"
-import { useRouter } from "next/router"
 import { Footer } from "./Footer"
 
 interface LayoutProps {

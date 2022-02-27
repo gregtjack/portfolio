@@ -29,7 +29,6 @@ const NavLink = ({text, to}: NavType) => {
 }
 
 const Navbar = () => {
-  
   const { theme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
 
