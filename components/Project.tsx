@@ -30,8 +30,8 @@ const Project: FunctionComponent<ProjectType> = ({title, tags, link, description
             }
           </div>
         </div>
-        <div className="p-3">
-          {imgsrc ? <img src={imgsrc} className="rounded-lg overflow-hidden max-w-sm" /> : <></>}
+        <div className="px-4 py-2 overflow-hidden">
+          {imgsrc ? <img src={imgsrc} className="rounded-lg" /> : <></>}
         </div>
         {children}
     </div>

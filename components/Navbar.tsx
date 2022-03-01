@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
+import { Mark } from './Links'
 
 interface NavType {
   text: string,
@@ -42,8 +43,8 @@ const Navbar = () => {
         <Link href="/">
           <a>
             <img 
-              className="outline-gray-400 hover:shadow-lg rounded-full w-24 h-24 transition-all" 
-              src="/images/profile.jpg"/>
+                className="outline-gray-400 hover:shadow-lg rounded-full w-24 h-24 transition-all" 
+                src="/images/profile.jpg"/>
           </a>
         </Link>
         <div>
