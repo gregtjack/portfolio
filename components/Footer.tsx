@@ -1,6 +1,4 @@
-import Link from "next/link"
 import { IoLogoGithub, IoLogoLinkedin, IoLogoTwitter, IoMail } from "react-icons/io5"
-import { UnderlineLink } from "./Links"
 
 const Footer = () => {
     return (

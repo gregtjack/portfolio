@@ -10,10 +10,16 @@ const Projects: NextPage = () => {
   return (
     <Layout meta={meta}>
       <Project
+        title="Portfolio Website"
+        description="This website."
+        tags={["TypeScript", "Next.js", "React", "TailwindCSS"]}
+        link="https://github.com/gregtjack/portfolio"
+        year="2022"
+      />
+      <Project
         title="Discord Bot"
-        description="A Discord bot created for the Maryland Marching Band trumpet section. Currently, it can be used to create polls, events, and confessions."
+        description="A Discord bot created for the Maryland Marching Band trumpet section that uses Discord.js. Currently, it can be used to create polls, events, and confessions."
         tags={["TypeScript", "Node.js"]}
-        imgsrc="/images/rybot2.png"
         link="https://github.com/gregtjack/rybot"
         year="2021"
       />
