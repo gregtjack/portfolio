@@ -20,11 +20,11 @@ const Home: NextPage = () => {
           I'm a software engineer studying computer science at the <UnderlineLink href="https://umd.edu">University of Maryland</UnderlineLink>. I'm interested in fullstack web development. 
         </p>
         <p className='text-2xl mt-3 mb-3 text-gray-600 dark:text-gray-300'>
-          Outside of coding, I'm passionate about jazz and music theory. Sometimes I like to <UnderlineLink href="https://soundcloud.com/gregoriousj">compose my own music</UnderlineLink>.
-          At UMD I'm involved with the Marching Band and the Pep Band where I play trumpet.
+          Outside of coding, I'm passionate about music. Sometimes I like to <UnderlineLink href="https://soundcloud.com/gregoriousj">compose music of my own</UnderlineLink>.
+          At UMD, I'm involved with the Marching and Pep Band where I play trumpet.
         </p>
         <br />
-        <Button href='/files/resume.pdf'>
+        <Button href='/resume.pdf'>
           <span className='mr-2'>View Resume</span>
           <IoOpenOutline />
         </Button>

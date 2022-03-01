@@ -5,8 +5,8 @@ import { UnderlineLink } from "./Links"
 const Footer = () => {
     return (
         <div>
-            <footer className="flex items-center mx-auto max-w-6xl px-4 py-6 md:py-16 text-gray-600 dark:text-gray-300">
-                <div className="flex text-3xl">
+            <footer className="mx-auto max-w-6xl px-4 py-6 md:py-16 text-gray-600 dark:text-gray-300">
+                <div className="flex items-center text-3xl mb-2">
                     <a href="https://github.com/gregtjack" className="mr-2 hover:text-accent transition-colors">
                         <IoLogoGithub />
                     </a>
@@ -20,7 +20,7 @@ const Footer = () => {
                         <IoMail />
                     </a>
                 </div>
-                <UnderlineLink href="https://github.com/gregtjack/portfolio">Built by Greg Jackson in 2022 </UnderlineLink>
+                <a className="text-sm" href="https://github.com/gregtjack/portfolio">Built by Greg Jackson in 2022 </a>
             </footer>
         </div>
     )
