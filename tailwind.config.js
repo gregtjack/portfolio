@@ -11,12 +11,15 @@ module.exports = {
       fontFamily: {
         'sans': ["'Inter', regular"],
         'bold': ["'Inter', bold"],
-        'mono': ["'Roboto Mono'"]
+        'ship': ["Shippori Antique B1"],
+        'mono': ["'Roboto Mono'"],
+        'nunito': ["'Nunito', regular"],
+        'ital': ["'Nunito', italic"]
       },
       colors: {
         //'accent': '#106aff',
-        'accent': '#486cfa',
-        'accent-dark': '#4754c9'
+        'accent': '#284af7',
+        'accent-dark': '#4754c9',
       }
     },
     

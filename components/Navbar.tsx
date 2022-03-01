@@ -42,7 +42,7 @@ const Navbar = () => {
         <Link href="/">
           <a>
             <img 
-              className="outline-gray-400 hover:outline-accent rounded-full w-24 h-24" 
+              className="outline-gray-400 hover:shadow-lg rounded-full w-24 h-24 transition-all" 
               src="/images/profile.jpg"/>
           </a>
         </Link>
