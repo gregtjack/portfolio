@@ -12,7 +12,7 @@ const Projects: NextPage = () => {
       <Project
         title="Portfolio Website"
         description="This website."
-        tags={["TypeScript", "Next.js", "React", "TailwindCSS"]}
+        tags={["TypeScript", "Next.js", "React"]}
         link="https://github.com/gregtjack/portfolio"
         year="2022"
       />
