@@ -22,7 +22,7 @@ const NavLink = ({text, to}: NavType) => {
 
   return (
     <Link href={to}>
-      <a className={"text-xl px-3 hover:underline transition-all " + activeStyle} onClick={handleClick}>
+      <a className={"text-lg px-3 hover:underline transition-all " + activeStyle} onClick={handleClick}>
         {text}
       </a>
     </Link>
@@ -32,7 +32,7 @@ const NavLink = ({text, to}: NavType) => {
 const DropdownMenu = () => {
   const { theme, setTheme } = useTheme()
   return (
-    <Menu as="div" className="relative inline-block text-left">
+    <Menu as="div" className="relative inline-block text-left z-10">
         <div>
           <Menu.Button className="transition-colors inline-flex justify-center w-full hover:bg-gray-200 dark:hover:bg-zinc-800 rounded-md text-2xl p-2 font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
             <IoEllipsisVertical />

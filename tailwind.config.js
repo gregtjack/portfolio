@@ -1,4 +1,4 @@
-const colors = require('tailwindcss/colors')
+const colors = ['#4441f0', '#bf2bf0', '#17ebaf', '#1092e8', '#e61e1e', '#71e61e', '#e6cb1e', '#d96fd2', '#ed8e40']
 
 module.exports = {
   content: [
@@ -15,10 +15,8 @@ module.exports = {
         'varela': ["'Varela Round', regular"]
       },
       colors: {
-        //'accent': '#106aff',
-        //'accent': '#2573d9',
-        'accent': '#4441f0',
-        'accent-dark': '#3a37d4',
+        'accent': colors[3],
+        'accent-dark': '#1e7ce8',
       }
     },
     

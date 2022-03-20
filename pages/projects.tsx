@@ -14,7 +14,7 @@ const Projects: NextPage = () => {
         <SectionHeader name='Projects' />  
       </EaseInSection>
       <Project
-        title="Portfolio Website"
+        title="Portfolio"
         description="This website."
         tags={["TypeScript", "Next.js", "React"]}
         link="https://github.com/gregtjack/portfolio"

@@ -8,9 +8,9 @@ type EaseInSectionType = {
 const EaseInSection: FunctionComponent<EaseInSectionType> = ({children, delay}) => {
     return (
         <motion.div 
-          initial={{y: 10, opacity: 0}} 
+          initial={{y: 20, opacity: 0}} 
           animate={{y: 0, opacity: 1}} 
-          transition={{duration: 0.3, delay}}
+          transition={{duration: 0.4, delay}}
         >
           {children}
         </motion.div>

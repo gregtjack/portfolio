@@ -27,7 +27,7 @@ const Home: NextPage = () => {
     }}>
       <div>
         <EaseInSection delay={0}>
-          <div className='flex items-center justify-center mt-7 mb-14'>
+          <div className='flex items-center justify-center mb-6 px-10 bg-gray-100 drop-shadow-xl dark:bg-zinc-900 rounded-xl py-10'>
             <div className='mr-10'>
               <div className='font-varela font-semibold text-5xl mb-2'>Greg Jackson</div>
               <div className='text-md rounded-xl'>Software engineer / student at UMD</div>
