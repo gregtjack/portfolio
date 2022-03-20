@@ -1,13 +1,16 @@
 import type { NextPage } from 'next'
 import { Layout } from '../components/Layout'
 import { UnderlineLink } from '../components/Links'
+import SectionHeader from '../components/SectionHeader'
 import { motion } from "framer-motion"
 import { IoOpenOutline } from "react-icons/io5";
 import { FunctionComponent } from 'react';
+import EaseInSection from '../components/EaseInSection'
 
 type Link = {
   href: string
 }
+
 
 const ResumeButton: FunctionComponent<Link> = ({href, children}) => {
   return (
@@ -23,23 +26,17 @@ const Home: NextPage = () => {
       title: "Greg Jackson"
     }}>
       <div>
-        <motion.div
-          className='mt-4 mb-14 flex items-center justify-center'
-          initial={{y: 10, opacity: 0}} 
-          animate={{y: 0, opacity: 1}} 
-          transition={{duration: 0.4, delay: 0}}
-        >
-          <div className='mr-10'>
-            <div className='font-varela font-semibold text-5xl mb-2'>Greg Jackson</div>
-            <div className='text-md rounded-xl'>Software engineer / student at UMD</div>
+        <EaseInSection delay={0}>
+          <div className='flex items-center justify-center mt-7 mb-14'>
+            <div className='mr-10'>
+              <div className='font-varela font-semibold text-5xl mb-2'>Greg Jackson</div>
+              <div className='text-md rounded-xl'>Software engineer / student at UMD</div>
+            </div>
+            <img src='/images/profile.jpg' className='rounded-full w-24 h-24 transition-colors' />
           </div>
-          <img src='/images/profile.jpg' className='rounded-full w-24 h-24 transition-colors' />
-        </motion.div>
-        <motion.div
-          initial={{y: 10, opacity: 0}} 
-          animate={{y: 0, opacity: 1}} 
-          transition={{duration: 0.4, delay: 0.1}}
-        >
+        </EaseInSection>
+        <EaseInSection delay={0.1}>
+          <SectionHeader name='Bio' />
           <p className="text-xl mt-3 mb-3 text-gray-600 dark:text-gray-300">
             Hi! I'm a software engineer studying computer science at the <UnderlineLink href="https://umd.edu">University of Maryland</UnderlineLink>. I'm interested in fullstack web development. 
           </p>
@@ -48,17 +45,13 @@ const Home: NextPage = () => {
             At UMD, I'm involved with the Marching and Pep Band where I play trumpet.
           </p>
           <br />
-        </motion.div>
-        <motion.div 
-          initial={{y: 10, opacity: 0}} 
-          animate={{y: 0, opacity: 1}} 
-          transition={{duration: 0.4, delay: 0.2}}
-        >
+        </EaseInSection>
+        <EaseInSection delay={0.2}>
           <ResumeButton href='/resume.pdf'>
             <span className='mr-2'>View Resume</span>
             <IoOpenOutline />
           </ResumeButton>
-        </motion.div>
+        </EaseInSection>
       </div>
     </Layout>
   )

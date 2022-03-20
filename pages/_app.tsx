@@ -6,7 +6,7 @@ import { ThemeProvider } from 'next-themes'
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider attribute="class" defaultTheme="system">
-      <NextNProgress color='#009de0' height={2}/>
+      <NextNProgress color='#4441f0' height={2}/>
       <Component {...pageProps} />
     </ThemeProvider>
   )

@@ -1,6 +1,8 @@
 import type { NextPage } from 'next'
+import EaseInSection from '../components/EaseInSection'
 import { Layout } from '../components/Layout'
 import { Project } from "../components/Project"
+import SectionHeader from '../components/SectionHeader'
 
 
 const Projects: NextPage = () => {
@@ -8,6 +10,9 @@ const Projects: NextPage = () => {
     <Layout meta={{
       title: "Greg Jackson // Projects"
     }}>
+      <EaseInSection delay={0}>
+        <SectionHeader name='Projects' />  
+      </EaseInSection>
       <Project
         title="Portfolio Website"
         description="This website."
