@@ -1,10 +1,9 @@
 import { SyntheticEvent } from 'react'
 import { useTheme } from 'next-themes'
 import Link from 'next/link'
-import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
-import { Mark } from './Links'
+import { IoMenu, IoMoon, IoMusicalNotes, IoSunny } from 'react-icons/io5'
 
 interface NavType {
   text: string,
@@ -13,7 +12,7 @@ interface NavType {
 
 const NavLink = ({text, to}: NavType) => {
   const router = useRouter()
-  const activeStyle = router.asPath === to ? 'font-bold' : 'text-gray-400'
+  const activeStyle = router.asPath === to ? 'text-accent' : 'text-gray-600 dark:text-gray-300'
 
   const handleClick = (e: SyntheticEvent) => {
     e.preventDefault()
@@ -22,7 +21,7 @@ const NavLink = ({text, to}: NavType) => {
 
   return (
     <Link href={to}>
-      <a className={"font-sans text-2xl px-3 hover:text-accent transition-all " + activeStyle} onClick={handleClick}>
+      <a className={"text-xl px-3 hover:underline transition-all " + activeStyle} onClick={handleClick}>
         {text}
       </a>
     </Link>
@@ -38,51 +37,38 @@ const Navbar = () => {
   }, [])
 
   return (
-    <div className="max-w-6xl px-4 py-16 md:py-12">
+    <div className="max-w-6xl px-4 py-8">
       <div className="flex items-center justify-between md:flex-row">
-        <Link href="/">
-          <a>
-            <img 
-                className="outline-gray-400 hover:shadow-lg rounded-full w-24 h-24 transition-all" 
-                src="/images/profile.jpg"/>
+        <div className='items-center flex'>
+          <a href="/" className='text-xl mr-6 flex items-center'>
+            <IoMusicalNotes className='mr-1' />
+            <div className='font-varela'>
+              gregtjack
+            </div>
           </a>
-        </Link>
-        <div>
-          <NavLink text='About' to='/' />
-          <NavLink text='Projects' to='/projects' />
+          <div className='md:inline-block items-center hidden'>
+            <NavLink text='Projects' to='/projects' />
+          </div>
         </div>
         <button
           aria-label="Toggle Dark Mode"
           type="button"
-          className="h-10 w-10 rounded p-3 focus:outline-none"
+          className="h-10 w-10 rounded p-3 md:inline-block hidden"
           onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
         >
-          {mounted && (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              stroke="currentColor"
-              className="h-4 w-4 dark:text-white text-black"
-            >
-              {theme === 'dark' ? (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
-                />
-              ) : (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
-                />
-              )}
-            </svg>
+          {mounted && theme === 'dark' ? (
+            <IoSunny />
+          ) : (
+            <IoMoon />
           )}
         </button>
+        <div className='md:hidden flex text-2xl'>
+          <label className="btn m-1">Click</label>
+            <ul className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+              <li><a>Item 1</a></li>
+              <li><a>Item 2</a></li>
+            </ul>
+        </div>
       </div>
     </div>
   )

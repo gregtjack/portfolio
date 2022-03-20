@@ -9,20 +9,19 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'sans': ["'Inter', regular"],
-        'bold': ["'Inter', bold"],
-        'ship': ["Shippori Antique B1"],
-        'mono': ["'Roboto Mono'"],
-        'nunito': ["'Nunito', regular"],
-        'ital': ["'Nunito', italic"]
+        'sans': ["'Noto Sans', regular"],
+        'bold': ["'Noto Sans', bold"],
+        'ital': ["'DM Sans', italic"],
+        'varela': ["'Varela Round', regular"]
       },
       colors: {
         //'accent': '#106aff',
-        'accent': '#2573d9',
-        'accent-dark': '#4754c9',
+        //'accent': '#2573d9',
+        'accent': '#009de0',
+        'accent-dark': '#0085cc',
       }
     },
     
   },
-  plugins: [],
+  plugins: []
 }

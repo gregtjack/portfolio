@@ -18,7 +18,7 @@ const Footer = () => {
                         <IoMail />
                     </a>
                 </div>
-                <a className="text-sm" href="https://github.com/gregtjack/portfolio">Built by Greg Jackson in 2022 </a>
+                <a className="text-sm" href="https://github.com/gregtjack/portfolio">© 2022 Greg Jackson. All Rights Reserved.</a>
             </footer>
         </div>
     )
