@@ -27,14 +27,17 @@ const Home: NextPage = () => {
     }}>
       <div>
         <EaseInSection delay={0}>
-          <div className='mb-6 px-10 bg-gray-100 drop-shadow-xl dark:bg-zinc-900 rounded-xl py-10'>
-            <div className='flex items-center justify-center px-10'>
+          <div className='mb-6 px-10 py-10 bg-gray-100 dark:bg-zinc-900 rounded-xl hidden sm:block'>
+            <div className='flex items-center justify-center'>
               <div className='mr-10'>
                 <div className='font-varela font-semibold text-5xl mb-2'>Greg Jackson</div>
                 <div className='text-md rounded-xl'>Software engineer / student at UMD</div>
               </div>
               <img src='/images/profile.jpg' className='rounded-full w-24 h-24 transition-colors' />
             </div>
+          </div>
+          <div className='flex justify-center sm:hidden'>
+            <img src='/images/profile.jpg' className='rounded-full w-28 h-28 mb-5' />
           </div>
         </EaseInSection>
         <EaseInSection delay={0.1}>

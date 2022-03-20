@@ -101,7 +101,7 @@ const Navbar = () => {
   }, [])
 
   return (
-    <div className="max-w-6xl px-4 py-8">
+    <div className="px-4 py-8">
       <div className="flex items-center justify-between md:flex-row">
         <div className='items-center flex'>
           <a href="/" className='text-xl mr-6 flex items-center'>
