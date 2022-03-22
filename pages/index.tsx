@@ -6,6 +6,7 @@ import { motion } from "framer-motion"
 import { IoOpenOutline } from "react-icons/io5";
 import { FunctionComponent } from 'react';
 import EaseInSection from '../components/EaseInSection'
+import { Project } from '../components/Project'
 
 type Link = {
   href: string
@@ -57,6 +58,7 @@ const Home: NextPage = () => {
             <IoOpenOutline />
           </ResumeButton>
         </EaseInSection>
+        
       </div>
     </Layout>
   )

@@ -1,9 +1,9 @@
 import { IoLogoGithub, IoLogoLinkedin, IoLogoTwitter, IoMail } from "react-icons/io5"
 
-const Footer = () => {
+export const Footer = () => {
     return (
         <div>
-            <footer className="mx-auto max-w-6xl px-4 py-6 md:py-16 text-gray-600 dark:text-gray-300">
+            <footer className="mx-auto px-4 py-6 md:py-16 text-gray-600 dark:text-gray-300">
                 <div className="flex items-center text-3xl mb-2">
                     <a href="https://github.com/gregtjack" className="mr-2 hover:text-accent transition-colors">
                         <IoLogoGithub />
@@ -23,5 +23,3 @@ const Footer = () => {
         </div>
     )
 }
-
-export { Footer }

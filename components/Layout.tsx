@@ -10,14 +10,14 @@ interface LayoutProps {
     }
 }
 
-const Layout: FunctionComponent<LayoutProps> = ({meta, children}) => {
+export const Layout: FunctionComponent<LayoutProps> = ({meta, children}) => {
     return (
         <div className="flex justify-center px-4 mx-auto max-w-8xl sm:px-6 lg:px-8">
             <Head>
                 <title>{meta.title}</title>
                 <meta content={meta.description} name="description" />
             </Head>
-            <main className="flex flex-col justify-between mx-4 max-w-3xl min-w-0">
+            <main className="flex flex-col h-screen mx-4 max-w-3xl min-w-0">
                 <Navbar />
                 <div className="w-full px-4 mb-auto">
                     {children}
@@ -27,5 +27,3 @@ const Layout: FunctionComponent<LayoutProps> = ({meta, children}) => {
         </div>
     )
 }
-
-export { Layout }
