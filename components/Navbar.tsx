@@ -13,7 +13,7 @@ interface NavType {
 
 const NavLink = ({text, to}: NavType) => {
   const router = useRouter()
-  const activeStyle = router.asPath === to ? 'text-accent' : 'text-gray-600 dark:text-gray-300'
+  const activeStyle = router.asPath === to ? ' text-accent' : 'text-gray-600 dark:text-gray-300'
 
   const handleClick = (e: SyntheticEvent) => {
     e.preventDefault()
@@ -22,7 +22,7 @@ const NavLink = ({text, to}: NavType) => {
 
   return (
     <Link href={to}>
-      <a className={"text-lg px-3 hover:underline transition-all " + activeStyle} onClick={handleClick}>
+      <a className={"text-lg font-varela p-2 mr-3 hover:opacity-60 transition-all" + activeStyle} onClick={handleClick}>
         {text}
       </a>
     </Link>

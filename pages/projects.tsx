@@ -31,7 +31,7 @@ const Projects: NextPage = () => {
       />
       <Project
         title="loft129.org"
-        description="Website and logo designed for a live music venue in Cumberland, MD."
+        description="Website designed for a live music venue in Cumberland, MD."
         link="https://loft129.org"
         year="2021"
         delay={0.2}
