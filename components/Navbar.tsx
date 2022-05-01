@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useEffect, useState, Fragment } from 'react'
 import { Menu, Transition } from '@headlessui/react'
-import { IoChevronDown, IoEllipsisVertical, IoMoon, IoMusicalNotes, IoSunny } from 'react-icons/io5'
+import { IoEllipsisVertical, IoMoon, IoMusicalNotes, IoSunny } from 'react-icons/io5'
 
 interface NavType {
   text: string,
@@ -32,9 +32,9 @@ const NavLink = ({text, to}: NavType) => {
 const DropdownMenu = () => {
   const { theme, setTheme } = useTheme()
   return (
-    <Menu as="div" className="relative inline-block text-left z-10">
+    <Menu as="div" className="relative z-10 inline-block text-left">
         <div>
-          <Menu.Button className="transition-colors inline-flex justify-center w-full hover:bg-gray-200 dark:hover:bg-zinc-800 rounded-md text-2xl p-2 font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
+          <Menu.Button className="inline-flex justify-center w-full p-2 text-2xl font-medium transition-colors hover:bg-gray-200 dark:hover:bg-zinc-800 rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
             <IoEllipsisVertical />
           </Menu.Button>
         </div>
@@ -47,7 +47,7 @@ const DropdownMenu = () => {
           leaveFrom="transform opacity-100 scale-100"
           leaveTo="transform opacity-0 scale-95"
         >
-          <Menu.Items className="absolute right-0 w-56 mt-2 origin-top-right bg-white dark:bg-zinc-800 divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+          <Menu.Items className="absolute right-0 w-56 mt-2 bg-white shadow-lg origin-top-right dark:bg-zinc-800 divide-y divide-gray-100 rounded-md ring-1 ring-black ring-opacity-5 focus:outline-none">
             <div className="px-1 py-1 ">
             <Menu.Item>
                 {({ active }) => (
@@ -103,22 +103,17 @@ const Navbar = () => {
   return (
     <div className="px-4 py-8">
       <div className="flex items-center justify-between md:flex-row">
-        <div className='items-center flex'>
-          <a href="/" className='text-xl mr-6 flex items-center'>
-            <IoMusicalNotes className='mr-1' />
-            <div className='font-varela'>
-              gregtjack
-            </div>
-          </a>
-          <div className='md:inline-block items-center hidden'>
+        <div className='flex items-center'>
+          <div className='items-center hidden md:inline-block'>
+            <NavLink text='About' to='/' />
             <NavLink text='Projects' to='/projects' />
           </div>
         </div>
         <button
           aria-label="Toggle Dark Mode"
           type="button"
-          className="h-10 w-10 rounded p-3 md:inline-block hidden"
-          onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+          className="hidden w-10 h-10 p-3 rounded md:inline-block"
+          onClick={() => setTheme(theme == 'dark' ? 'light' : 'dark')}
         >
           {mounted && theme === 'dark' ? (
             <IoSunny />
@@ -126,7 +121,7 @@ const Navbar = () => {
             <IoMoon />
           )}
         </button>
-        <div className='md:hidden inline-block'>
+        <div className='inline-block md:hidden'>
           <DropdownMenu />
         </div>
       </div>
