@@ -1,3 +1,2 @@
-# gregtjack.space
-
-My personal website
+# gregtjack
+My portfolio website, created using Next.js and TailwindCSS
