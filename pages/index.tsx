@@ -41,11 +41,11 @@ const Home: NextPage = () => {
         <EaseInSection delay={0.1}>
           <SectionHeader name='Bio' />
           <p className="mt-3 mb-3 text-xl text-gray-600 dark:text-gray-300">
-            Hi, I'm a rising junior currently studying computer science at the <UnderlineLink href="https://umd.edu">University of Maryland</UnderlineLink>. 
+            Hi, I'm a software engineer, hardware enthusiest, and student currently studying computer science at the <UnderlineLink href="https://umd.edu">University of Maryland</UnderlineLink>. 
             I'm open to all types of developement roles, but I am especially interested in fullstack.
           </p>
           <p className='mt-3 mb-3 text-xl text-gray-600 dark:text-gray-300'>
-            My interests include video games, anime, and music. Sometimes I like to <UnderlineLink href="https://soundcloud.com/gregoriousj">write my own music</UnderlineLink> in my spare time.
+            My interests and hobbies include playing video games, watching anime, and playing/writing music. You can check tunes I've written <UnderlineLink href="https://soundcloud.com/gregoriousj">here</UnderlineLink>.
             At UMD, I'm a member of the Mighty Sound of Maryland and the Maryland Pep Band where I play trumpet.
           </p>      
           <br />
