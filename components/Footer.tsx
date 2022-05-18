@@ -3,7 +3,7 @@ import { IoLogoGithub, IoLogoLinkedin, IoLogoTwitter, IoMail } from "react-icons
 export const Footer = () => {
     return (
         <div>
-            <footer className="mx-auto px-4 py-6 md:py-16 text-gray-600 dark:text-gray-300">
+            <footer className="mx-auto py-8 md:py-16 text-gray-600 dark:text-gray-300">
                 <div className="flex items-center text-3xl mb-2">
                     <a href="https://github.com/gregtjack" className="mr-2 hover:text-accent transition-colors">
                         <IoLogoGithub />
@@ -18,7 +18,7 @@ export const Footer = () => {
                         <IoMail />
                     </a>
                 </div>
-                <a className="text-sm" href="https://github.com/gregtjack/portfolio">© 2022 Greg Jackson. All Rights Reserved.</a>
+                    <a className="text-sm" href="https://github.com/gregtjack/portfolio">© 2022 Greg Jackson. All Rights Reserved.</a>
             </footer>
         </div>
     )

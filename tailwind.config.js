@@ -7,14 +7,11 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'sans': ["'Noto Sans', regular"],
-        'bold': ["'Noto Sans', bold"],
-        'ital': ["'DM Sans', italic"],
         'varela': ["'Varela Round', regular"]
       },
       colors: {
-        'accent': '#3b52ff',
-        'accent-dark': '#1e32c7',
+        'accent': '#0059de',
+        'accent-dark': '#1240a3',
       }
     },
     

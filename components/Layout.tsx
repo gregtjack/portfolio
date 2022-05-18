@@ -12,17 +12,21 @@ interface LayoutProps {
 
 export const Layout: FunctionComponent<LayoutProps> = ({meta, children}) => {
     return (
-        <div className="flex justify-center px-4 mx-auto max-w-8xl sm:px-6 lg:px-8">
+        <div className="flex justify-center mx-auto">
             <Head>
                 <title>{meta.title}</title>
                 <meta content={meta.description} name="description" />
             </Head>
-            <main className="flex flex-col h-screen mx-4 max-w-3xl min-w-0">
+            <main className="flex flex-col h-screen w-full min-w-0">
+                <div className="sticky top-0 z-50">
                 <Navbar />
-                <div className="w-full px-4 mb-auto">
-                    {children}
                 </div>
-                <Footer />
+                <div className="flex items-center justify-center">
+                    <div className="max-w-3xl px-4 mb-auto sm:px-6 lg:px-8">
+                        {children}
+                    <Footer />
+                    </div>
+                </div>
             </main>
         </div>
     )
