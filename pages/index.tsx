@@ -2,8 +2,6 @@ import type { NextPage } from 'next'
 import { Layout } from '../components/Layout'
 import { UnderlineLink } from '../components/Links'
 import SectionHeader from '../components/SectionHeader'
-import { IoDocumentText } from "react-icons/io5";
-import { FunctionComponent } from 'react';
 import EaseInSection from '../components/EaseInSection'
 import { Project } from '../components/Project';
 
@@ -18,7 +16,7 @@ const Home: NextPage = () => {
           <div className='py-6 mb-3 rounded-xl sm:block'>
             <div className='flex'>
               <div className='mr-10'>
-                <div className='mb-3 md:text-6xl text-4xl font-semibold'>
+                <div className='mb-3 md:text-6xl text-4xl font-bold'>
                   Hi, I'm Greg 👋 
                 </div>
                 <div className='text-lg'>Incoming SWE Intern @ <UnderlineLink href='https://www.immuta.com'>Immuta</UnderlineLink> · CS @ UMD</div>
@@ -41,14 +39,7 @@ const Home: NextPage = () => {
         <EaseInSection delay={0.2}>
           <SectionHeader name="Stuff" />  
         </EaseInSection>
-        <Project
-          title="Valorant Data Analysis"
-          description="My final project for CMSC320: An analysis of professional Valorant players' stats using python, pandas, numpy, and other tools."
-          tags={["Python"]}
-          link="/valorant_analysis"
-          year="2022"
-          delay={0.3}
-        />
+        
         <Project
           title="Portfolio"
           description="This website."
@@ -59,7 +50,7 @@ const Home: NextPage = () => {
         />
         <Project
           title="RYBot"
-          description="A Discord bot created for the Maryland Marching Band trumpet section that uses Discord.js. Currently, it can be used to create polls, events, and more."
+          description="A Discord bot created for the Mighty Sound of Maryland trumpet section that uses Discord.js. Currently, it can be used to create polls, events, and more."
           tags={["TypeScript", "Node.js"]}
           link="https://github.com/gregtjack/rybot"
           year="2021"
