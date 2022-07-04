@@ -19,7 +19,7 @@ const Home: NextPage = () => {
                 <div className='mb-3 md:text-6xl text-4xl font-bold'>
                   Hi, I'm Greg 👋 
                 </div>
-                <div className='text-lg'>Incoming SWE Intern @ <UnderlineLink href='https://www.immuta.com'>Immuta</UnderlineLink> · CS @ UMD</div>
+                <div className='text-lg'>SWE Intern @ <UnderlineLink href='https://www.immuta.com'>Immuta</UnderlineLink> · CS @ UMD</div>
               </div>
             </div>
           </div>
